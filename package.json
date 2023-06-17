@@ -1,6 +1,6 @@
 {
   "name": "react-tree-connect",
-  "version": "0.0.4",
+  "version": "0.0.3",
   "source": "index.html",
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "eslint ./src/**/*",
     "lint:fix": "eslint ./src/**/* --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "release": "HUSKY_SKIP_HOOKS=1 standard-version",
+    "release": "HUSKY_SKIP_HOOKS=1 standard-version --no-verify",
     "commit": "cz",
     "prepare": "husky install"
   },

@@ -1,17 +1,26 @@
 {
   "name": "react-tree-connect",
   "version": "0.0.1",
-  "main": "index.js",
+  "source": "index.html",
   "license": "MIT",
   "scripts": {
-    "dev": "yarn parcel index.html"
+    "dev": "yarn parcel",
+    "build": "yarn parcel build",
+    "lint": "eslint ./src/**/*",
+    "lint:fix": "eslint ./src/**/* --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
     "parcel": "^2.9.2",
+    "prettier": "^2.8.8",
     "process": "^0.11.10"
   }
 }

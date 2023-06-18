@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "yarn parcel",
     "build": "yarn parcel build",
-    "lint": "eslint ./src/**/*",
-    "lint:fix": "eslint ./src/**/* --fix",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version --no-verify",
     "commit": "cz",

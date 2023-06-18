@@ -1,6 +1,6 @@
 import './App.css';
 import { useRef, useState } from 'react';
-import Circle from './components/Circle';
+import Circle from './components/examples/Circle';
 import Tree from './components/Tree';
 
 export function App() {
@@ -26,7 +26,7 @@ export function App() {
         Add Circle
       </button>
       <div className="containerCircle" ref={containerRef} onContextMenu={(e) => e.preventDefault()}>
-        <Tree>{elements}</Tree>
+        <Tree containerRef={containerRef}>{elements}</Tree>
       </div>
     </div>
   );

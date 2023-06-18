@@ -20,6 +20,7 @@ const Component = styled.div.attrs((props) => ({
   text-align: center;
   cursor: pointer;
   user-select: none;
+  z-index: 10000;
 `;
 
 const Circle = forwardRef(({ treeId, connectId, onClick, containerRef }, ref) => {

@@ -1,7 +1,7 @@
 import './App.css';
 import { useRef, useState } from 'react';
 import Circle from './components/examples/Circle';
-import Tree from './components/Tree';
+import Tree from './components/Tree/Tree';
 
 export function App() {
   const containerRef = useRef(null);

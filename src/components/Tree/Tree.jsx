@@ -1,9 +1,15 @@
 import React, { createRef, useEffect, useState } from 'react';
-import Arrow from './Arrow';
+import Arrow from './components/Arrow';
+import useMutationObserver from './hooks/useMutationObserver';
 
 const Tree = ({ children, containerRef }) => {
   const refs = children.map(() => createRef());
   const [arrows, setArrows] = useState([]);
+
+  useMutationObserver(containerRef, () => {
+    clearArrows();
+    drawArrows();
+  });
 
   useEffect(() => {
     clearArrows();

@@ -93,7 +93,8 @@ const Circle = forwardRef(({ treeId, connectId, onClick, containerRef }, ref) =>
       left={position.left}
       onMouseDown={setMouseDragging}
       onMouseUp={setMouseDragging}
-      onClick={(e) => onClick(e, treeId)}>
+      onClick={(e) => onClick(e, treeId)}
+    >
       data-tree-id="{treeId}"<br />
       data-tree-connect-from="{connectId}"
     </Component>

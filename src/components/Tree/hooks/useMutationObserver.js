@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 
 const useMutationObserver = (
   ref,
@@ -10,7 +10,7 @@ const useMutationObserver = (
     subtree: true
   }
 ) => {
-  React.useEffect(() => {
+  useEffect(() => {
     if (ref.current) {
       const observer = new MutationObserver(callback);
       observer.observe(ref.current, options);

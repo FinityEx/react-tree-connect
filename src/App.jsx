@@ -1,3 +1,33 @@
+import './App.css';
+import { useRef, useState } from 'react';
+import Circle from './components/Circle';
+import Tree from './components/Tree';
+
 export function App() {
-  return <h1>Hello world!</h1>;
+  const containerRef = useRef(null);
+  const [elements, setElements] = useState([]);
+
+  const addCircle = (e, parentIndex = null) => {
+    setElements((prevState) => [
+      ...prevState,
+      <Circle
+        key={prevState.length + 1}
+        treeId={prevState.length + 1}
+        connectId={parentIndex}
+        containerRef={containerRef}
+        onClick={addCircle}
+      />
+    ]);
+  };
+
+  return (
+    <div className="container">
+      <button className="btn" onClick={addCircle}>
+        Add Circle
+      </button>
+      <div className="containerCircle" ref={containerRef} onContextMenu={(e) => e.preventDefault()}>
+        <Tree>{elements}</Tree>
+      </div>
+    </div>
+  );
 }
